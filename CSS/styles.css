@@ -1,0 +1,149 @@
+/* CSS reset */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root{
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Very_Darkcyan: hsl(156, 42%, 18%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very_dark_blue: hsl(212, 21%, 14%);
+    --Dark_grayish_blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Fraunces', serif;
+}
+
+/* Body */
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 16px;
+    font-weight: 500;
+    font-family: var(--font-primary);
+    background-color: var(--Cream);
+}
+
+/* Card Layout */
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+    background-color: var(--White);
+    color: var(--Dark_grayish_blue);
+    border-radius: 0.7rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+.card-image img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Card Content */
+.card-content{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.category {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: var(--dark-grayish-blue);
+}
+.card-content h1{
+    font-weight: 700;
+    font-size: 2rem;
+    font-family: var(--font-secondary);
+    color: var(--Very_dark_blue);
+}
+
+.description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Prices */
+.prices{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: var(--font-secondary);   
+}
+.prices strong{
+    color: var(--Darkcyan);
+    font-size: 2rem;
+    font-weight: 700;
+}
+.prices del{
+    text-decoration: line-through;
+    font-size: 0.9rem;
+}
+
+/* Cart Button */
+.cart{
+    width: 100%;
+    padding: 1rem;
+    background: var(--Darkcyan);
+    color: var(--White);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s; 
+}
+.cart:hover{
+    background-color: var(--Very_Darkcyan);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 0.5rem;
+    max-height: 3rem;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 2rem;
+    background-color: var(--White);
+    color: var(--Dark_grayish_blue);
+}
+   
+/* Footer Links */
+footer a {
+    color: var(--Very_dark_blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Mobile Layout */
+@media (max-width: 767px) {
+    body{
+        padding: 1rem;
+    }
+    .card {
+        grid-template-columns: 1fr;
+    }
+    .card-content {
+        padding: 1.5rem;
+    }
+    .cart{
+        gap: 3rem;
+    }
+}
