@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution Repository]()
-- [Live Demo]()
+- [Solution Repository](https://github.com/mod-prashant/Product-preview-card-component)
+- [Live Demo](https://product-preview-card-component-omega-eight.vercel.app/)
 
 
 ## My process
